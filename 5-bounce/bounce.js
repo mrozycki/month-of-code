@@ -40,11 +40,13 @@ Ball.prototype.tick = function(t) {
   if (this.position.y < minY) {
     this.position.y = 2*minY-this.position.y;
     this.velocity.y = -this.velocity.y*0.7;
+    this.velocity.x = this.velocity.x*0.9;
   }
 
   if (this.position.y > maxY) {
     this.position.y = 2*maxY-this.position.y;
     this.velocity.y = -this.velocity.y*0.7;
+    this.velocity.x = this.velocity.x*0.9;
   }
 
   if (this.position.x < minX) {
