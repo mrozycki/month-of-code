@@ -40,11 +40,13 @@ Ball.prototype.tick = function(t) {
   if (this.position.y < minY) {
     this.position.y = 2*minY-this.position.y;
     this.velocity.y = -this.velocity.y*0.7;
+    this.velocity.x = this.velocity.x*0.95;
   }
 
   if (this.position.y > maxY) {
     this.position.y = 2*maxY-this.position.y;
     this.velocity.y = -this.velocity.y*0.7;
+    this.velocity.x = this.velocity.x*0.95;
   }
 
   if (this.position.x < minX) {
@@ -63,5 +65,9 @@ Ball.prototype.tick = function(t) {
 
 var ball = new Ball(document.getElementById("ball"));
 
+window.onresize = function() {
+  maxY = window.innerHeight-50;
+  maxX = window.innerWidth-50;
+}
 
 setInterval(function(){ball.tick(0.033);}, 33);
