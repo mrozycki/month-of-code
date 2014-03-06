@@ -2,7 +2,7 @@ var elem = document.getElementById("error");
 var hash = decodeURIComponent(window.location.hash);
 
 if (hash !== "" && hash !== "#") {
-  elem.innerText = hash.slice(1);
+  elem.innerHTML = hash.slice(1);
 }
 
 function displacement() {
@@ -25,7 +25,7 @@ function displacement() {
 setTimeout(displacement, Math.random()*1000);
 
 function letterSwap() {
-  var text = elem.innerText;
+  var text = elem.innerHTML;
   var letters = text.split("");
   var number = Math.floor(Math.random()*letters.length);
 
@@ -35,10 +35,10 @@ function letterSwap() {
     letters[index] = letter;
   }
 
-  elem.innerText = letters.join("");
+  elem.innerHTML = letters.join("");
 
   setTimeout(function() {
-    elem.innerText = text;
+    elem.innerHTML = text;
     setTimeout(function() {
       letterSwap();
     }, Math.random()*1000);
