@@ -1,5 +1,5 @@
 var elem = document.getElementById("error");
-var hash = window.location.hash;
+var hash = decodeURIComponent(window.location.hash);
 
 if (hash !== "" && hash !== "#") {
   elem.innerText = hash.slice(1);
