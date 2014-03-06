@@ -4,7 +4,7 @@ function getCookie(cookie) {
   for (var i = 0; i < cookies.length; i++) {
     var trimmed = cookies[i].trim();
     if (trimmed.indexOf(name)===0) {
-      return cookie.substring(name.length, trimmed.length);
+      return trimmed.substring(name.length);
     }
   }
   return "";
