@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background-color: #111;
+}
+
+#binary-clock {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 512px;
+  height: 256px;
+  margin-left: -256px;
+  margin-top: -128px;
+}
+
+.tick {
+  width: 60px;
+  height: 60px;
+  margin: 2px;
+  float: left;
+  transition: 200ms background-color;
+}
+
+.tick.on {
+  background-color: #eee;
+}
