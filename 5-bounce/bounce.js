@@ -65,5 +65,9 @@ Ball.prototype.tick = function(t) {
 
 var ball = new Ball(document.getElementById("ball"));
 
+window.onresize = function() {
+  maxY = window.innerHeight-50;
+  maxX = window.innerWidth-50;
+}
 
 setInterval(function(){ball.tick(0.033);}, 33);
