@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+}
+
+.tick {
+  width: 24px;
+  height: 42px;
+  font-size: 42px;
+  line-height: 42px;
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+
+.tick .zero {
+  position: relative;
+  top: -42px;
+}
+
+.tick.one .zero {
+  background-color: transparent;
+  color: transparent;
+}
+
+.tick span {
+  background-color: black;
+  color: green;
+  display: block;
+  width: 100%;
+}
