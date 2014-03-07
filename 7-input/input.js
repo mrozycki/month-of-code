@@ -4,7 +4,6 @@ var sURL = "http://" +
          "/month-of-code/7-input/input.js";
 
 oRequest.open("GET",sURL,false);
-oRequest.setRequestHeader("User-Agent",navigator.userAgent);
 oRequest.send(null);
 
 if (oRequest.status==200) {
