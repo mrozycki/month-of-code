@@ -7,7 +7,7 @@ oRequest.open("GET",sURL,false);
 oRequest.send(null);
 
 if (oRequest.status==200) {
-  document.getElementById("text").innerHTML = oRequest.reponseText;
+  document.getElementById("text").innerHTML = oRequest.responseText;
 } else {
   alert("Error executing XMLHttpRequest call!");
 }
