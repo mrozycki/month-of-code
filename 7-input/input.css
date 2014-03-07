@@ -5,8 +5,10 @@
   box-sizing: border-box;
   font-size: 20px;
   line-height: 30px;
-  font-weight: normal;
+  font-weight: bold;
   font-family: monospace;
+  color: #0F0;
+  background-color: black;
 }
 
 body {
@@ -17,4 +19,11 @@ h1 {
   padding-bottom: 15px;
   border-bottom: 1px dashed black;
   margin-bottom: 14px;
+}
+
+h2 {
+  padding-top: 15px;
+  border-top: 1px dashed black;
+  margin-top: 14px;
+  display: none;
 }

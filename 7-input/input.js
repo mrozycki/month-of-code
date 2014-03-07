@@ -9,6 +9,7 @@ oRequest.send(null);
 if (oRequest.status==200) {
   document.getElementById("text").innerHTML = "Loaded. Start typing<br>";
   var text = oRequest.responseText;
+  var justLoaded = true;
 } else {
   document.getElementById("text").innerHTML = "ERROR "+oRequest.status;
   document.getElementById("eos").style.display = "block";
@@ -20,6 +21,12 @@ window.onkeypress = function() {
     return;
   }
 
-  document.getElementById("text").innerHTML += text[0];
+  if (justLoaded) {
+    document.getElementById("text").innerHTML = text[0];
+    justLoaded = false;
+  } else {
+    document.getElementById("text").innerHTML += text[0];
+  }
+
   text = text.substring(1);
 };
