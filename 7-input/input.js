@@ -1,7 +1,7 @@
 var oRequest = new XMLHttpRequest();
 var sURL = "http://" +
-         self.location.hostname +
-         "/month-of-code/7-input/input.js";
+  self.location.hostname +
+  "/month-of-code/7-input/input.js";
 
 oRequest.open("GET",sURL,false);
 oRequest.send(null);
@@ -18,6 +18,7 @@ if (oRequest.status==200) {
 window.onkeypress = function() {
   if (typeof text === "undefined" || text.length === 0) {
     document.getElementById("eos").style.display = "block";
+    window.scrollBy(0,100);
     return;
   }
 
@@ -26,6 +27,7 @@ window.onkeypress = function() {
     justLoaded = false;
   } else {
     document.getElementById("text").innerHTML += text[0];
+    window.scrollBy(0,30);
   }
 
   text = text.substring(1);
