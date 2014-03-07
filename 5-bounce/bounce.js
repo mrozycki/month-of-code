@@ -1,3 +1,18 @@
+if (typeof (new MouseEvent("").offsetX) === "undefined") {
+  Object.defineProperties(MouseEvent.prototype, {
+    offsetX: {
+      get: function() {
+	return this.clientX - this.target.getBoundingClientRect().left;
+      }
+    },
+    offsetY: {
+      get: function() {
+	return this.clientY - this.target.getBoundingClientRect().top;
+      }
+    }
+  });
+}
+
 function getCookie(cookie) {
   var name = cookie+"=";
   var cookies = document.cookie.split(";");
@@ -64,8 +79,8 @@ Vector.prototype.scale = function(k) {
 
 if (typeof Math.sign == "undefined") {
   Math.sign = function(v) {
-    if (v > 0) return -1;
-    else if (v < 0) return 1;
+    if (v < 0) return -1;
+    else if (v > 0) return 1;
     else if (v === 0) return 0;
     else return NaN;
   };
@@ -76,7 +91,7 @@ function Ball(elem) {
   this.element = elem;
   this.element.onclick = function(e) {
     var x = -(e.offsetX-50)/50*500;
-    var y = Math.sign((e.offsetY-50)/50)*500;
+    var y = -Math.sign((e.offsetY-50)/50)*500;
     ball.velocity = new Vector(x,y);
     game.score();
   };
