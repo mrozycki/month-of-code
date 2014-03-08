@@ -1,0 +1,39 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5em;
+  font-family: Consolas, monospace;
+  font-weight: bold;
+}
+
+body {
+  font-size: 20px;
+  background-color: #333;
+  color: #aaa;
+}
+
+div {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+#number {
+  top: 50%;
+  font-size: 240px;
+  margin-top: -180px;
+  cursor: pointer;
+}
+
+.prime {
+  color: white;
+}
+
+.info {
+  color: white;
+  transition: 300ms all;
+  font-size: 36px;
+  top: 50%;
+  margin-top: -200px;
+}
